@@ -11,6 +11,14 @@ public class Bienvenido {
         var palabra=in.next();
         System.out.println("La palabra que escribiste es:"+palabra);
 
+        //Arreglos
+        String[] authors = {
+                "James Gosling",
+                "Bill Joy",
+                "Guy Steele",
+// agregar mas..
+        };
+
 
     }
 }
