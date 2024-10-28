@@ -1,5 +1,7 @@
 package unidad1;
 
+import java.util.Random;
+
 public class Operadores {
     public static void main(String[] args) {
 
@@ -11,8 +13,10 @@ public class Operadores {
 
        //Ejemplo de operador Ternario condicional, el resultado final se asigna a lo que desees.
        var a=5;
-       var b=6;
+       int b=6;
        var c=10;
+
+       var d=new Random();
 
      c=  a<b? a:c;
 
