@@ -7,6 +7,10 @@ public class Trabajador {
     public Trabajador() {
     }
 
+    public  static void pagar(){
+        System.out.println("Vamos a pagarte");
+    }
+
     @Override
     public String toString() {
         return "Trabajador{" +
