@@ -16,6 +16,11 @@ public class MisStreams {
      //Algunos metodos de Stream son intermedios, es decir nos devuelen otro Stream
          List<String> frutas2=frutas.stream().limit(2).collect(Collectors.toList());
 
+ //Los metodos intermedios son acumulables o stackeables, hasta que se invoca el metodo teminal
+        frutas.stream().limit(4)
+                        .sorted()
+                        .collect(Collectors.toList());
+
 
 
     }
