@@ -1,6 +1,7 @@
 package unidad1;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -20,8 +21,19 @@ public class MisStreams {
         frutas.stream().limit(4)
                         .sorted()
                         .collect(Collectors.toList());
+List<Trabajador> trabajadores=Arrays.asList(new Trabajador("Juan,",2000), new Trabajador("Gera", 4000));
 
+  var frutas3= frutas.stream().sorted((s1,s2)->s1.length()-s2.length()).collect(Collectors.toList());
+  frutas3.forEach(fruta-> System.out.println(fruta));
+  var frutas4=   frutas.stream().filter(fruta->fruta.length()<6).collect(Collectors.toList());
 
+  trabajadores.stream().sorted(Comparator.comparing(Trabajador::getNombre));
 
+        System.out.println("Fruta con menos d 6 letras");
+frutas4.forEach(fruta->{
+    System.out.println("Fruta con una menos de 6 letras");
+    System.out.println(fruta);
+
+});
     }
 }
