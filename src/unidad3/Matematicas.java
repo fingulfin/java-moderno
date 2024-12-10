@@ -5,7 +5,7 @@ public class Matematicas {
     int x;
     int y;
     MiInterface miInterface;
-    OperarNumeroInterface operarNumeroInterface;
+  //  OperarNumeroInterface operarNumeroInterface;
 
     public Matematicas() {
     }
