@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 
 public class TestStreams {
     public static void main(String[] args) {
-
+List<String> frutas=List.of("manzana","durazno", "guayaba","platano","mango", "higo", "fresa","coco" );
         List<Dish> menu = List.of(
                 new Dish("pork", false, 800, Dish.Type.MEAT),
                 new Dish("beef", false, 700, Dish.Type.MEAT),
@@ -27,6 +27,9 @@ public class TestStreams {
          comparamos por nombre, pero se puede hacer por cualqueir otro miembro de la clase
          Referencia: https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/stream/Stream.html#sorted(java.util.Comparator)
          */
+
+        var frutasOrdenadas =frutas.stream().sorted((f1,f2)->f1.compareTo(f2)).collect(Collectors.toList());
+        frutasOrdenadas.forEach(System.out::println);
      var ordenados1=  menu.stream().sorted((p1,p2)->p1.name().compareTo(p2.name())).collect(Collectors.toList());
         System.out.println("Ejercicio 1");
      ordenados1.forEach(plato-> System.out.println(plato));
@@ -38,6 +41,7 @@ public class TestStreams {
     menuPorCalorias.forEach(me-> System.out.println(me));
 
     /* Ejercicio 3. Obtener lo platillos que son vegetarinoso
+    https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/stream/Stream.html#filter(java.util.function.Predicate)
 
      */
         System.out.println("EJECICIO 3-----------------------");
